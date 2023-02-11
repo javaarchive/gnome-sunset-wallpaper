@@ -44,16 +44,7 @@ function writeImage(image, canvas, ctx) {
   let file = `${homedir}/bin/wpp/out${Date.now()}.png`;
   writeFile(file, canvas.toBuffer(), () => {
     if (VERBOSITY > 1) console.log(`Written to ${file}, setting as wallpaper.`);
-    exec(`dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
-var Desktops = desktops();                                                                                                                       
-for (i=0;i<Desktops.length;i++) {
-        d = Desktops[i];
-        d.wallpaperPlugin = "org.kde.image";
-        d.currentConfigGroup = Array("Wallpaper",
-                                    "org.kde.image",
-                                    "General");
-        d.writeConfig("Image", "${file}");
-}'`);
+    exec(`gsettings set org.gnome.desktop.background picture-uri file://${file}`);
   });
   if (VERBOSITY > 0)
     console.log("New wpp! Time: " + new Date(Date.now()).toString());

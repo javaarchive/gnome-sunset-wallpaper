@@ -35,4 +35,6 @@ It probably shouldn't be node.js, but I'm only really good at node, and the canv
  - You should be all set! If the wallpaper changes, you've done everything correctly.
 5. Enjoy!
 
-## NOTE: THIS IS NOT SUPPORTED OUTSIDE KDE PLASMA. I HAVE NO IDEA HOW TO DO IT OUTSIDE OF KDE PLASMA, AND I DON'T PARTICULARLY CARE EITHER.
+## NOTE: THIS IS NOT SUPPORTED OUTSIDE OF GNOME (FOR KDE PLASMA USE THE REPO I FORKED IT FROM). 
+
+Also please note that gnome versions with different backgrounds based off color scheme is not yet supported but you're welcome to PR it in (I might add it later for my fedora desktop). See [this AskUbuntu](https://askubuntu.com/a/69500) post. Yes I know it says Unity but the answer is for gnome shell. 
